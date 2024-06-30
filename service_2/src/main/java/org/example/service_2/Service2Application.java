@@ -21,7 +21,7 @@ public class Service2Application {
 
     @GetMapping("/hello")
     public Map<String, Object> hello(HttpServletRequest request) throws Exception{
-        TimeUnit.SECONDS.sleep(15);
+//        TimeUnit.SECONDS.sleep(15);
         return Map.of(
                 "response", "Hello from service 2",
                 "ipAddress", request.getRemoteAddr(),
