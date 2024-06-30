@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: proxy
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+zuul:
+  ignored-services: '*'
+  routes:
+    service:
+      path: /api/service/**
+      service-id: service
+    service3:
+      path: /api/service3/**
+      service-id: service3
